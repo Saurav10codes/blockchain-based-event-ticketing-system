@@ -6,7 +6,7 @@ import TicketPage from "./components/TicketPage";
 import BiddingPage from "./components/BiddingPage";
 import PerkManagementPage from "./components/PerkManagementPage";
 import TicketDetails from "./components/TicketDetails";
-import AddEvent from "./components/AddEvent"; // ✅ Import new page
+import AddEvent from "./components/AddEvent"; //  Import new page
 
 const App: React.FC = () => {
   return (
@@ -18,7 +18,7 @@ const App: React.FC = () => {
         <Route path="/bidding" element={<BiddingPage />} />
         <Route path="/perks" element={<PerkManagementPage />} />
         <Route path="/ticket/:id" element={<TicketDetails />} />
-        <Route path="/add-event" element={<AddEvent />} /> {/* ✅ New route */}
+        <Route path="/add-event" element={<AddEvent />} /> {/*  New route */}
       </Routes>
     </Router>
   );
