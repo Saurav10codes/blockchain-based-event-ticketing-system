@@ -1,7 +1,7 @@
 [package]
 name = "blockchain-based-event-ticketing-system"
 version = "1.0.0"
-authors = []
+authors = ["Harshit", "Saurav", "Jayjit", "Manan"]
 
 [addresses]
 addr = "8cef1a57893b6d61680f96e2b7a5ac6510e16935f0f49f407d2159723dbf46c5"
