@@ -9,6 +9,8 @@ import PerkManagementPage from "./components/PerkManagementPage";
 import ContactUs from "./components/ContactUs";
 import AboutUs from "./components/AboutUs";
 import TicketDetails from "./components/TicketDetails"; // ✅ Import TicketDetails
+import TicketDetails from "./components/TicketDetails";
+import AddEvent from "./components/AddEvent"; //  Import new page
 
 const App: React.FC = () => {
   return (
@@ -23,6 +25,8 @@ const App: React.FC = () => {
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/ticket/:id" element={<TicketDetails />} /> {/* ✅ Fix: Added route */}
+        <Route path="/ticket/:id" element={<TicketDetails />} />
+        <Route path="/add-event" element={<AddEvent />} /> {/*  New route */}
       </Routes>
     </Router>
   );

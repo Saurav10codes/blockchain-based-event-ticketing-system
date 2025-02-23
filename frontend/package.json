@@ -15,11 +15,17 @@
     "@mui/material": "^6.4.5",
     "axios": "^1.7.9",
     "framer-motion": "^12.4.7",
+<<<<<<< HEAD
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.2.0",
     "react-slick": "^0.30.3",
     "slick-carousel": "^1.8.1"
+=======
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.2.0"
+>>>>>>> 6002e44a3680925521e1731f87fd87ed955c1f47
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
