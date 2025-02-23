@@ -18,14 +18,21 @@ const TicketDetails: React.FC = () => {
 
   useEffect(() => {
     async function fetchDetails() {
-      const data = await getTicketDetails(id); // ✅ Fetch ticket details
-      setEvent(data);
+      if (!id) return;
+      const data = await getTicketDetails(id);
+
+      if (data) {
+        setEvent(data);
+      } else {
+        console.error("Event not found!");
+      }
     }
+
     fetchDetails();
   }, [id]);
 
   if (!event) {
-    return <Typography>Loading...</Typography>; // ✅ Show loading state
+    return <Typography sx={{ textAlign: "center", marginTop: "20px", color: "red" }}>Event not found or still loading...</Typography>;
   }
 
   return (
@@ -45,10 +52,7 @@ const TicketDetails: React.FC = () => {
           <Typography variant="h6" color="grey">
             Price: <strong>{event.price} APT</strong>
           </Typography>
-          <Button
-            variant="contained"
-            sx={{ marginTop: "10px", backgroundColor: "cyan", color: "black" }}
-          >
+          <Button variant="contained" sx={{ marginTop: "10px", backgroundColor: "cyan", color: "black" }}>
             Book Ticket
           </Button>
         </CardContent>

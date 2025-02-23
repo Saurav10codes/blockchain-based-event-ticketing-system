@@ -18,12 +18,11 @@ const AddEvent: React.FC = () => {
   };
 
   const handleSubmit = () => {
-    // Store in localStorage (temporary) or integrate with backend
     const storedEvents = JSON.parse(localStorage.getItem("events") || "[]");
-    const newEvent = { ...event, id: Date.now().toString() }; // Assign a unique ID
+    const newEvent = { ...event, id: Date.now().toString() }; // ✅ Assign unique ID
     localStorage.setItem("events", JSON.stringify([...storedEvents, newEvent]));
 
-    navigate("/"); // Redirect back to home page
+    navigate("/events"); // ✅ Redirect to events page
   };
 
   return (

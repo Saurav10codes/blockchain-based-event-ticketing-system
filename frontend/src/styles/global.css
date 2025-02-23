@@ -54,4 +54,12 @@ body {
   .connect-wallet:hover {
     background: linear-gradient(45deg, #0072ff, #00c6ff);
   }
+  body {
+    background: url('../assets/futuristic-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
   
