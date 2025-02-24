@@ -1,28 +1,46 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+declare let window: any;
+
 const Navbar: React.FC = () => {
-  const [walletConnected, setWalletConnected] = useState<boolean>(false);
+  const [walletState, setWalletState] = useState("CONNECT");
+
+  const [isConnected, setIsConnected] = useState(false);
+  window.aptos.isConnected().then((res: boolean)=>{setIsConnected(res)})
+
+
+  useEffect(()=>{
+    if(isConnected){
+      setWalletState("CONNECTED");
+    }
+  }, [isConnected]);
+
 
   const connectWallet = () => {
-    // Wallet connect logic (stub)
-    setWalletConnected(true);
+    if(window.aptos == undefined){
+      alert("please install petra wallet")
+    }else{
+      window.aptos.connect()
+      .then(({address}:{address:string})=>{ console.log(address) })
+      .then(()=>{setWalletState("CONNECTED");})
+      .catch((e: unknown)=>{console.error(e)});
+    }
   };
 
   return (
     <AppBar position="static" sx={{ background: "transparent", boxShadow: "none", padding: "10px 20px" }}>
       <Toolbar sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         
-        {/* Title with animation */}
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
           <Typography variant="h4" sx={{ color: "cyan" }}>
             Decentralized Events
           </Typography>
         </motion.div>
 
-        {/* Navigation Links */}
         <Box sx={{ flexGrow: 1, display: "flex", justifyContent: "center" }}>
           <Button component={Link} to="/" sx={{ color: "cyan", margin: "0 10px" }}>
             Home
@@ -38,7 +56,6 @@ const Navbar: React.FC = () => {
           </Button>
         </Box>
 
-        {/* Wallet Connection Button */}
         <Button 
           variant="outlined"
           sx={{
@@ -48,7 +65,7 @@ const Navbar: React.FC = () => {
           }}
           onClick={connectWallet}
         >
-          {walletConnected ? "Wallet Connected" : "Connect Wallet"}
+          {walletState}
         </Button>
       </Toolbar>
     </AppBar>
