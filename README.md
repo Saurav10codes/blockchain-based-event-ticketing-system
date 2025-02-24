@@ -10,29 +10,22 @@ https://blockchain-based-event-ticketing-system-7r4t.vercel.app/
 ![ss](https://raw.githubusercontent.com/Saurav10codes/blockchain-based-event-ticketing-system/refs/heads/main/screenshots/6.jpg)
 
 Decentralized Event Ticketing System 🎟
+
 A blockchain-based event ticketing system built with Aptos, Move, and React (Vite). This system ensures secure, transparent, and decentralized ticket management with features like NFT-based tickets, a bidding system for premium seats, and dynamic perk management.
 
 🚀 Features
 Event Ticketing on Blockchain – Secure, NFT-based event tickets.
+
 Bidding System for Premium Tickets – Users can bid for high-demand tickets.
+
 Dynamic Ticketing & Perk Management – Organizers can add perks (upgrades, backstage access) post-minting.
+
 Futuristic UI Design – Aesthetic interface with animations and a modern theme.
 🛠 Tech Stack
 Frontend: React (Vite), TypeScript
 Backend: Aptos Blockchain, Move Language
 Deployment: Vercel
-📂 Project Structure
- ├── /src
- │   ├── /assets        # Images & static assets
- │   ├── /components    # React components (UI)
- │   ├── /styles        # Global styles
- │   ├── /utils         # Blockchain services (Aptos)
- │   ├── App.tsx        # Main app entry point
- │   ├── index.tsx      # React root file
- ├── package.json       # Dependencies & scripts
- ├── tsconfig.json      # TypeScript config
- ├── vite.config.ts     # Vite config
- ├── README.md          # Project documentation
+
 📸 Screenshots & Pages
 1️⃣ Home Page 🏠
 ✅ Futuristic design
