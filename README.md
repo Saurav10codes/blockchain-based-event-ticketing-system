@@ -27,44 +27,78 @@ Backend: Aptos Blockchain, Move Language
 Deployment: Vercel
 
 📸 Screenshots & Pages
+
 1️⃣ Home Page 🏠
+
 ✅ Futuristic design
+
 ✅ Slideshow of event images
+
 ✅ Introduction to the platform
 
+
 2️⃣ Events Page 🎭
+
 ✅ List of available events
+
 ✅ Option to add new events
+
 ✅ Event details with images
 
+
 3️⃣ Ticket Page 🎟
+
 ✅ View ticket details
+
 ✅ Buy & manage NFT tickets
 
+
 4️⃣ Bidding System ⚡
+
 ✅ Users can place bids for premium tickets
+
 ✅ Auction-based ticket allocation
 
+
 5️⃣ Perk Management 🎁
+
 ✅ Organizers can add perks to tickets
+
 ✅ Users get notifications for perks
 
+
 6️⃣ Contact Us 📞
+
 ✅ Get in touch with the team
+
 ✅ Social media links & form
 
+
 📦 Installation & Setup
+
 1️⃣ Clone the Repository
+
 git clone https://github.com/your-repo/event-ticketing.git
+
 cd event-ticketing
+
 2️⃣ Install Dependencies
+
 npm install
+
 3️⃣ Start the Development Server
+
 npm run dev
+
 4️⃣ Build for Production
+
 npm run build
 
+
 Kumar Saurav - Blockchain & smart Contracts
+
 Harshit Anand - Blockchain & Smart Contracts
+
 Manan Meemroth - Frontend & UI/UX
+
 Jayjit Singha - Frontend & UI/UX
